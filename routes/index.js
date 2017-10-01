@@ -14,7 +14,7 @@ router.post('/upload', (req, res, next) => {
   if (file.name.endsWith('.ogg')) {
 
     // Use the mv() method to place the file somewhere on your server
-    sampleFile.mv(path.join(`/home/pi/node/brave-bot/soundFiles`, `${filename}`), function(err) {
+    file.mv(path.join(`/home/pi/node/brave-bot/soundFiles`, `${filename}`), function(err) {
       if (err)
       return res.status(500).send(err);
 
@@ -23,10 +23,6 @@ router.post('/upload', (req, res, next) => {
   } else {
     res.status(400).send('wrong file type moron')
   }
-
-
-  console.log(sampleFile)
-  res.render('index')
 })
 
 
