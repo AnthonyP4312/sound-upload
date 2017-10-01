@@ -17,7 +17,7 @@ router.post('/upload', (req, res, next) => {
       res.status(400).send('name too long moron')
     }
     // Use the mv() method to place the file somewhere on your server
-    file.mv(path.join(`/home/pi/node/brave-bot/soundFiles`, `${file.name}`), function (err) {
+    file.mv(path.join(`/home/pi/node/brave-bot/soundFiles`, `${file.name.toLowerCase()}`), function (err) {
       if (err) { return res.status(500).send(err) }
 
       res.send('File uploaded!')
