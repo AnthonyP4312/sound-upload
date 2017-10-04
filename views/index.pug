@@ -6,7 +6,7 @@ block content
   .form.form-inline(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
     .form-group
       .input-group
-        input.form-control(type="file", name="sound")
+        input.file(type="file", name="sound")
         input.btn.btn-default(type="submit", value="Upload!")
     
   .container(id='list')
