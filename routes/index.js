@@ -12,10 +12,10 @@ var db = new pg.Client()
 db.connect()
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', async function (req, res, next) {
   res.render('index', {
     title: 'Express',
-    sounds: querySongs()
+    sounds: await querySongs()
   })
 })
 
