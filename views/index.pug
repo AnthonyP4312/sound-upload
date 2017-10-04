@@ -1,13 +1,13 @@
 extends layout
 
 block content
-  p put the shit here my dude
+  h3 put the shit here my dude
 
-  .form-group
-    .form#uploadForm(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
+  .form.form-inline(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
+    .form-group
       .input-group
         input.form-control(type="file", name="sound")
-        input.form-control(type="submit", value="Upload!")
+        input.btn.btn-default(type="submit", value="Upload!")
     
   .container(id='list')
     each sound in sounds
