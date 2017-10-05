@@ -14,7 +14,7 @@ router.post('/upload', (req, res, next) => {
   let file = req.files.sound
   if (file.name.endsWith('.ogg')) {
     if (file.name.length > 20) {
-      res.status(400).send('name too long moron')
+      return res.status(400).send('name too long moron')
     }
     // Use the mv() method to place the file somewhere on your server
     file.mv(path.join(`/home/pi/node/brave-bot/soundFiles`, `${file.name.toLowerCase()}`), function (err) {
