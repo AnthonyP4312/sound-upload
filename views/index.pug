@@ -6,11 +6,10 @@ block content
   .form.form-inline(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
     input.file(type="file", name="sound")
     input.btn.btn-default(type="submit", value="Upload!")
-    
+  
+  -$("#input-id").fileinput();
+  
   .container(id='list')
     each sound in sounds
       .col-md-1
         a=sound
-
-  script
-    $("#input-id").fileinput();
