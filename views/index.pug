@@ -12,6 +12,20 @@ block content
     input.file(id='input-id' type="file", name="sound")
     input.btn.btn-default(type="submit", value="Upload!")
   
+  .input-group
+    label.input-group-btn
+      span.btn.btn-primary
+        input(type="file")
+  
+      //- <div class="input-group">
+      //-     <label class="input-group-btn">
+      //-         <span class="btn btn-primary">
+      //-             Browse&hellip; <input type="file" style="display: none;" multiple>
+      //-         </span>
+      //-     </label>
+      //-     <input type="text" class="form-control" readonly>
+      //- </div>
+  
   .container(id='list')
     each sound in sounds
       .col-md-1
