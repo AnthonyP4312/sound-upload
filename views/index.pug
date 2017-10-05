@@ -1,27 +1,10 @@
 extends layout
-style.
-  body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  }
 
-  a {
-    color: #00B7FF;
-  }
-
-  h3 {
-    text-align: center;
-  }
 block content
-  h3 put the shit here my dude
+  p put the shit here my dude
 
-  .form.form-inline#uploadForm(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
-    .form-group
-      input(type="file", name="sound")
-    .form-group    
-      input.btn-primary(type="submit", value="Upload!")
+  form#uploadForm(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
+    input(type="file", name="sound")
+    input(type="submit", value="Upload!")
     
-  //- .container(id='list')
-  //-   each sound in sounds
-  //-     .col-md-2
-  //-       a=sound
+    
