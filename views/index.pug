@@ -9,14 +9,12 @@ block content
   h3 put the shit here my dude
 
   .form.form-inline(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
-    input.file(id='input-id' type="file", name="sound")
-    input.btn.btn-default(type="submit", value="Upload!")
-  
-  .input-group
-    label.input-group-btn
-      span.btn.btn-primary Browse&hellip;
-        input(type="file" style="display: none;" multiple)
-    input.form-control(type="text" readonly)
+    .input-group
+      label.input-group-btn
+        span.btn.btn-primary Browse&hellip;
+          input(type="file" style="display: none;" multiple name="sound")
+      input.form-control(type="text" readonly)
+        input.btn.btn-default(type="submit", value="Upload!")
   
       //- <div class="input-group">
       //-     <label class="input-group-btn">
