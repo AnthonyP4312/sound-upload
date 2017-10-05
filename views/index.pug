@@ -1,31 +1,15 @@
 extends layout
 
 block content
-  script.
-    jQuery(document).ready(function ($) {
-      $("#input-id").fileinput();
-    }
-  
   h3 put the shit here my dude
 
-  .form.form-inline(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
-    .input-group
-      label.input-group-btn
-        span.btn.btn-primary Browse&hellip;
-          input(type="file" style="display: none;" multiple name="sound")
-          input.form-control(type="text" readonly)
-          input.btn.btn-default(type="submit", value="Upload!")
-  
-      //- <div class="input-group">
-      //-     <label class="input-group-btn">
-      //-         <span class="btn btn-primary">
-      //-             Browse&hellip; <input type="file" style="display: none;" multiple>
-      //-         </span>
-      //-     </label>
-      //-     <input type="text" class="form-control" readonly>
-      //- </div>
-  
+  .form.form-inline#uploadForm(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
+    .form-group
+      input(type="file", name="sound")
+    .form-group    
+      input.btn-primary(type="submit", value="Upload!")
+    
   //- .container(id='list')
   //-   each sound in sounds
-  //-     .col-md-1
+  //-     .col-md-2
   //-       a=sound
