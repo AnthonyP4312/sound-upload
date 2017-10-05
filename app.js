@@ -11,7 +11,6 @@ var index = require('./routes/index')
 
 var app = express()
 
-app.use('/public', express.static('public'))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
