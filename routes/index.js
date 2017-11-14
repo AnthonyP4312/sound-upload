@@ -9,6 +9,12 @@ router.get('/', function (req, res, next) {
   })
 })
 
+router.get('/upload', function (req, res, next) {
+  res.render('upload', {
+    title: 'im gay'
+  })
+})
+
 router.post('/upload', (req, res, next) => {
   if (!req.files) return res.status(400).send('No files were uploaded.')
   let file = req.files.sound

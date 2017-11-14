@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  p put the shit here my dude
+
+  form#uploadForm(ref="uploadForm", action="/upload", method="post", enctype="multipart/form-data")
+    input(type="file", name="sound")
+    input(type="submit", value="Upload!")
+    
+    

@@ -23,9 +23,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(fileupload())
-app.use(express.static(path.join(__dirname, 'public')))
+//app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
+app.use('/upload', index)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -45,7 +46,7 @@ app.use(function (err, req, res, next) {
   res.render('error')
 })
 
-app.listen(443, () => {
+app.listen(80, () => {
   console.log('server running')
 })
 
